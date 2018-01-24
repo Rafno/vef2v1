@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "name": "vef2-v1",
   "version": "0.6.0",
   "description": "Verkefni 1 í vefforritun 2018",
@@ -22,5 +23,20 @@
     "ejs": "^2.5.7",
     "express": "^4.16.2",
     "node-sass": "^4.5.3"
+=======
+  "name": "v1",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "eslint": "eslint *.js **/*.js"
+  },
+  "devDependencies": {
+    "eslint": "^4.16.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0"
+  },
+  "dependencies": {
+    "express": "^4.16.2"
+>>>>>>> 6a720246d9e780a41a0d43a287797f759e47b376
   }
 }
