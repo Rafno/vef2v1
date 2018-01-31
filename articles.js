@@ -22,33 +22,26 @@ function read(file) {
   return readFileAsync(file)
     .then(data => data.toString());
 }
-async function readArr(filename) {
-  let sorted = [];
-  for (let i = 0; i < filename.length; i++) {
-    await read(filename[i])
-      .catch(error => {
-        console.log(error);
-      })
-      .then(data => {
-        let content = fm(data);
-        sorted.push(content);
-        if (sorted.length === filename.length) {
-          sorted = sorted.sort(function (a, b) {
-            return Date.parse(a.date) < Date.parse(b.date);
-          });
-         return Promise.all(sorted);
-        }
-      });
-  }
-}
 
-router.get('/', (req, res) => {
-  console.log(readArr(filename));
-  const batman = readArr(filename)
-    .then(data => { console.log(data) })
+async function readFiles(files) {
+  const result = [];
+
+  for (let i = 0; i < filename.length; i++) {
+    result.push(await read(files[i]));
+  }
+
+  return Promise.all(result);
+}
+router.get('/:slug', (req, res) => {
+  readFiles(filename)
+    .then(data => {
+      console.log(req.params);
+      res.render('index', { title: 'FIKK', h1: "hey" });
+      //res.send(`Data = ${req.params.data}`);
+      const mapped = data.map(file => file = fm(file));
+    })
     .catch(error => { console.log(error) });
-    res.render('index', { title: 'FIKK', h1: 'Gagnagrunnur' });
-  });
+});
 
   router.get('/', (req, res) => {
     res.render('index', { title: 'FIKK', h1: 'Lorem-ipsum' });

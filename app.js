@@ -8,9 +8,9 @@ const port = 3000;
 
 app.use('/', articles);
 
+app.use(express.static(path.join(__dirname, 'public')));
 app.set('views', path.join(__dirname, 'views'));
 app.set('public', path.join(__dirname, 'public'));
-app.use(express.static(path.join(__dirname, 'public')));
 app.set('view engine', 'ejs');
 app.listen(port, hostname, () => {
   console.info(`Server running at http://${hostname}:${port}/`);
