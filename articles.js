@@ -32,6 +32,7 @@ async function readFiles(files) {
 
   return Promise.all(result);
 }
+//Vandamál her fyrir neðan
 router.get('/:slug', (req, res) => {
   readFiles(filename)
     .then(data => {
