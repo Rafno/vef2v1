@@ -36,7 +36,7 @@ router.get('/:slug', (req, res) => {
   readFiles(filename)
     .then(data => {
       console.log(req.params);
-      res.render('index', { title: 'FIKK', h1: "hey" });
+      res.render('index', { title: 'FIKK', h1: "Nenniru bara að fokking virka án djóks" });
       //res.send(`Data = ${req.params.data}`);
       const mapped = data.map(file => file = fm(file));
     })
