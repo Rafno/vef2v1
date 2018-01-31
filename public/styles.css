@@ -3,10 +3,23 @@
   padding: 0;
 }
 
+header {
+  background: transparent url(header.jpg) no-repeat;
+  height: 40em;
+  display: flex;
+  margin-top: 5em;
+  margin: 0 auto 20px;
+  align-items: center;
+  background-size: cover;
+  justify-content: center;
+}
 html {
   box-sizing: border-box;
 }
-
+.headTitle{
+  color:white;
+  font-weight:500;
+}
 *, *:before, *:after {
   box-sizing: inherit;
 }

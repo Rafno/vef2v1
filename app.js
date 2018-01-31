@@ -1,14 +1,17 @@
-const express = require('express');
-
+﻿const express = require('express');
 const app = express();
+const articles = require('./articles');
+const path = require('path');
 
 const hostname = '127.0.0.1';
 const port = 3000;
 
-app.get('/', (req, res) => {
-  res.send('Eyy Helgi');
-});
+app.use('/', articles);
 
+app.set('views', path.join(__dirname, 'views'));
+app.set('public', path.join(__dirname, 'public'));
+app.use(express.static(path.join(__dirname, 'public')));
+app.set('view engine', 'ejs');
 app.listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}/`);
+  console.info(`Server running at http://${hostname}:${port}/`);
 });
