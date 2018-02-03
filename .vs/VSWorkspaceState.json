@@ -1,7 +1,11 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\articles",
+    "\\layout",
+    "\\public",
+    "\\views"
   ],
-  "SelectedNode": "\\app.js",
+  "SelectedNode": "\\articles",
   "PreviewInSolutionExplorer": false
 }
