@@ -4,8 +4,9 @@
     "\\articles",
     "\\layout",
     "\\public",
+    "\\public\\scss",
     "\\views"
   ],
-  "SelectedNode": "\\articles",
+  "SelectedNode": "\\README.md",
   "PreviewInSolutionExplorer": false
 }
