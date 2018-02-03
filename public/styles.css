@@ -1,13 +1,10 @@
 * {
   /*margin: 0;*/
   padding: 0;
-  margin: auto;
-  max-width: 1200px;
-}
-img{
-  max-width: 100%;
 }
 body {
+  margin: auto;
+  max-width: 1200px;
   background-color: #eee;
   font-family: 'Lora', serif;
 }
@@ -60,4 +57,38 @@ html {
 }
 *, *:before, *:after {
   box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+img{
+  max-width: 100%;
+}
+.photo {
+  border: 2px solid grey;
+  height: 100%;
+  background-color: grey;
+}
+/*Aðal*/
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+}
+
+
+.item {
+  padding: 3em;
+  display:flex;
+  flex-direction:column;
+ width: 50%;
+  }
+@media (max-width: 600px){
+  .item{
+    width: 100%;
+  }
+}
+.text > h1{
+  font-size: 25px;
 }
