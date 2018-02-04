@@ -100,7 +100,7 @@ router.get('/:slug', (req, res) => {
         res.render('index', {
           title: `${map.attributes.title}`,
           h1: `${map.attributes.title}`,
-          p: `<p> ${markdown}</p>`,
+          p: `<div> ${markdown}</div>`,
           a: '<a href=\' / \'>Til baka</a>',
         });
       })

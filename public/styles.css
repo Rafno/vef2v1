@@ -36,7 +36,6 @@ header {
   margin-top: 5em;
   margin: 0 auto 20px;
   align-items: center;
-  background-size: cover;
   justify-content: center;
 }
 a {
@@ -91,4 +90,11 @@ img{
 }
 .text > h1{
   font-size: 25px;
+}
+
+blockquote{
+  display: block;
+  padding: 20px;
+  margin: 0 0 20px;
+  position: relative;
 }
